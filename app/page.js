@@ -6,7 +6,7 @@ const Home = () => {
         <br className="max-md:hidden" />
         <span className="orange_gradient text-center">AI-Powered Prompts</span>
       </h1>
-      <p>
+      <p className="desc text-center">
         Promptopia is an AI-powered prompt generator that helps you get unstuck,
         write more, share creative prompts and have fun.
       </p>
@@ -15,3 +15,4 @@ const Home = () => {
 };
 
 export default Home;
+ 
