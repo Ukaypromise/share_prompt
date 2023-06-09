@@ -47,6 +47,7 @@ const Navbar = () => {
                 width={37}
                 height={37}
                 className="rounded-full"
+                alt="logo"
               />
             </Link>
           </div>
@@ -76,6 +77,7 @@ const Navbar = () => {
               height={37}
               className="rounded-full"
               onClick={() => setToggleDropDown((prev) => !prev)}
+              alt="logo"
             />
             {toggleDropDown && (
               <div className="dropdown">
