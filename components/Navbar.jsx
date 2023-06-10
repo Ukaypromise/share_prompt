@@ -10,12 +10,19 @@ const { data:session} = useSession()
   const [providers, setProviders] = useState(null);
   const [toggleDropDown, setToggleDropDown] = useState(false);
 
+  // useEffect(() => {
+  //   (async () => {
+  //     const res = await getProviders();
+  //     setProviders(res);
+  //   })();
+  // }, []);
+
   useEffect(() => {
-    const setProviders = async () => {
+    const setUpProviders = async () => {
       const response = await getProviders();
       setProviders(response);
     };
-    setProviders();
+    setUpProviders()
   }, []);
 
   return (
@@ -30,6 +37,8 @@ const { data:session} = useSession()
         />
         <p className="logo_text">Promptopia</p>
       </Link>
+
+      {console.log(providers)}
       {/* Desktop Nav */}
       <div className="sm:flex hidden">
         {session?.user ? (
