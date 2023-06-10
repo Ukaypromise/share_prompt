@@ -37,8 +37,6 @@ const { data:session} = useSession()
         />
         <p className="logo_text">Promptopia</p>
       </Link>
-
-      {console.log(providers)}
       {/* Desktop Nav */}
       <div className="sm:flex hidden">
         {session?.user ? (
@@ -52,7 +50,7 @@ const { data:session} = useSession()
             </button>
             <Link href="/profile">
               <Image
-                src="/assets/images/logo.svg"
+                src={session?.user.image}
                 width={37}
                 height={37}
                 className="rounded-full"
@@ -81,7 +79,7 @@ const { data:session} = useSession()
         {session?.user ? (
           <div className="flex">
             <Image
-              src="/assets/images/logo.svg"
+              src={session?.user.image}
               width={37}
               height={37}
               className="rounded-full"
