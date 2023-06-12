@@ -27,7 +27,7 @@ const CreatePrompt = () => {
         body: JSON.stringify({
           prompt: post.prompt,
           tag: post.tag,
-          userID:session?.user.id
+          userId:session?.user.id
         })
       })
       if(response.ok){

@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Navbar = () => {
-const { data:session} = useSession()
+  const { data: session } = useSession();
   const [providers, setProviders] = useState(null);
   const [toggleDropDown, setToggleDropDown] = useState(false);
 
@@ -22,7 +22,7 @@ const { data:session} = useSession()
       const response = await getProviders();
       setProviders(response);
     };
-    setUpProviders()
+    setUpProviders();
   }, []);
 
   return (
