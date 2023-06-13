@@ -12,6 +12,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
 
+
+
 Create a .env.local file in the root of your project directory and add the following:
 
 ```bash
