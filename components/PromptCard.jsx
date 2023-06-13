@@ -70,7 +70,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
       <p className="my-4 font-satoshi text-sm text-gray-700">{post.prompt}</p>
 
       <a
-        href={`https://${post.link}`}
+        href={`${post.link}`}
         target="_blank"
         className="my-2 font-satoshi text-sm text-gray-800 orange_gradient"
       >

@@ -1,6 +1,8 @@
 import "@styles/globals.css";
 import Navbar from "@components/Navbar";
 import Provider from "@components/Provider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
   title: "Promptopia",
@@ -20,6 +22,7 @@ const RootLayout = ({ children }) => {
             <Navbar />
             {children}
           </main>
+          <ToastContainer />
         </Provider>
       </body>
     </html>
