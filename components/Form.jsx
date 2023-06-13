@@ -40,11 +40,27 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           required
           className="form_input"
         />
+        <label>
+          <span className="font-satoshi font-semibold text-base text-gray-700">
+            Link <span className="font-normal">(share your trending link)</span>
+          </span>
+        </label>
+        <input
+          value={post.link}
+          onChange={(e) => setPost({ ...post, link: e.target.value })}
+          placeholder="e.g https://www.twitter.com/your-trend"
+          required
+          className="form_input"
+        />
         <div className="flex-end mx-3 mb-5 gap-4 ">
-          <Link href='/' className="text-gray-500 text-sm">
+          <Link href="/" className="text-gray-500 text-sm">
             Cancel
           </Link>
-          <button type="submit" disabled={submitting} className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white">
+          <button
+            type="submit"
+            disabled={submitting}
+            className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white"
+          >
             {submitting ? `${type}...` : type}
           </button>
         </div>

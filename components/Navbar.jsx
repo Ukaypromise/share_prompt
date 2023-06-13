@@ -10,13 +10,6 @@ const Navbar = () => {
   const [providers, setProviders] = useState(null);
   const [toggleDropDown, setToggleDropDown] = useState(false);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const res = await getProviders();
-  //     setProviders(res);
-  //   })();
-  // }, []);
-
   useEffect(() => {
     const setUpProviders = async () => {
       const response = await getProviders();
@@ -30,19 +23,21 @@ const Navbar = () => {
       <Link href="/" className="flex gap-2 flex-center">
         <Image
           className="object-contain"
-          src="/assets/images/logo.svg"
-          width={30}
-          height={30}
+          src="/assets/images/logonew.svg"
+          width={50}
+          height={50}
           alt="logo"
         />
-        <p className="logo_text">Promptopia</p>
+        <p className="logo_text">
+          <span className="orange_gradient">Trend</span>Mania
+        </p>
       </Link>
       {/* Desktop Nav */}
       <div className="sm:flex hidden">
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
             <Link href="/create-prompt" className="black_btn">
-              Create Post
+              Create Trend
             </Link>
 
             <button type="button" onClick={signOut} className="outline_btn">
@@ -100,7 +95,7 @@ const Navbar = () => {
                   className="dropdown_link"
                   onClick={() => setToggleDropDown(false)}
                 >
-                  Create Prompt
+                  Create Trend
                 </Link>
                 <button
                   type="button"

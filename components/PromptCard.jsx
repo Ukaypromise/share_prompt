@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
@@ -67,6 +68,15 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
       </div>
 
       <p className="my-4 font-satoshi text-sm text-gray-700">{post.prompt}</p>
+
+      <a
+        href={`https://${post.link}`}
+        target="_blank"
+        className="my-2 font-satoshi text-sm text-gray-800 orange_gradient"
+      >
+        Click me to see trend
+      </a>
+
       <p
         className="font-inter text-sm blue_gradient cursor-pointer"
         onClick={() => handleTagClick && handleTagClick(post.tag)}

@@ -5,16 +5,16 @@ const Home = () => {
       <h1 className="head_text text-center">
         Discover and Share
         <br className="max-md:hidden" />
-        <span className="orange_gradient text-center">AI-Powered Prompts</span>
+        <span className="orange_gradient text-center"> Internet Trends</span>
       </h1>
       <p className="desc text-center">
-        Promptopia is an AI-powered prompt generator that helps you get unstuck,
-        write more, share creative prompts and have fun.
+        <span className="orange_gradient">TrendMania </span>
+        is the number one platform to find and add the latest trends in the
+        World. Create and share creative trends and have fun.
       </p>
-      <Feeds/>
+      <Feeds />
     </section>
   );
 };
 
 export default Home;
- 
